@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #0d1b2a;
+      padding: 1rem 2rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      margin: 0 1rem;
+    }
+    nav ul li a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem;
+      transition: background-color 0.3s, color 0.3s;
+      border-radius: 5px;
+    }
+    nav ul li a:hover {
+      background-color: #415a77;
+      color: #ffffff;
+    }
+    section {
+      padding: 100px 2rem 2rem;
+    }
+    #home {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .carousel {
+      width: 90%;
+      max-width: 1000px;
+      overflow: hidden;
+      margin-bottom: 2rem;
+    }
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .carousel-slide {
+      min-width: 20%;
+      padding: 0.5rem;
+    }
+    .carousel-slide img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+    .cta-button {
+      background-color: #ff6b6b;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .cta-button:hover {
+      background-color: #fa5252;
+    }
+    #projects, #about {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .project-categories {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      padding: 1rem 0;
+    }
+    .project-categories li {
+      list-style: none;
+    }
+    .project-categories a {
+      background-color: #1b263b;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .project-categories a:hover {
+      background-color: #415a77;
+    }
+    .project-list {
+      margin-top: 2rem;
+      padding: 1rem;
+      background-color: #e0e1dd;
+      border-radius: 8px;
+    }
+    .project-item {
+      margin-bottom: 1rem;
+    }
+    .project-item img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    footer {
+      background-color: #0d1b2a;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home">
+    <div class="carousel">
+      <div class="carousel-track" id="carouselTrack">
+        <div class="carousel-slide"><img src="project1.jpg" alt="Project 1"></div>
+        <div class="carousel-slide"><img src="project2.jpg" alt="Project 2"></div>
+        <div class="carousel-slide"><img src="project3.jpg" alt="Project 3"></div>
+        <div class="carousel-slide"><img src="project4.jpg" alt="Project 4"></div>
+        <div class="carousel-slide"><img src="project5.jpg" alt="Project 5"></div>
+      </div>
+    </div>
+    <button class="cta-button" onclick="location.href='#projects'">See My Work</button>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul class="project-categories">
+      <li><a href="#electronics">Electronics Projects</a></li>
+      <li><a href="#capstones">Capstone Projects</a></li>
+      <li><a href="#webgames">Web Games</a></li>
+      <li><a href="#html-css-js">HTML, CSS, JS Sites</a></li>
+      <li><a href="#wordpress">WordPress Sites</a></li>
+    </ul>
+
+    <div id="electronics" class="project-list">
+      <h3>Electronics Projects</h3>
+      <div class="project-gallery">
+        <div class="project-item"><img src="bag.png" alt="Electronics 1"><h4>Interactive Bag Using Arduino And Sound Sensor</h4></div>
+        <div class="project-item"><img src="zap.png" alt="Electronics 2"><h4>Zapping Rover Drone Using Step Up Power Module</h4></div>
+        <div class="project-item"><img src="sprin.png" alt="Electronics 3"><h4>Arduino Controlled Automatic Water Sprinkler System</h4></div>
+        <div class="project-item"><img src="solar.png" alt="Electronics 4"><h4>Solar Powered Automatic Agogo Dispenser</h4></div>
+        <div class="project-item"><img src="rasp.png" alt="Electronics 5"><h4>Simple Raspberry Pi Computer Vision Project</h4></div>
+        <div class="project-item"><img src="helmet.png" alt="Electronics 6"><h4>Interactive Cyberpunk Themed Helmet Prop</h4></div>
+        <div class="project-item"><img src="vik.png" alt="Electronics 7"><h4>DC Motor Viktor's Robotic Arm</h4></div>
+        <div class="project-item"><img src="sumobot.png" alt="Electronics 8"><h4>Club Sumo Bots</h4></div>
+        <div class="project-item"><img src="roar.png" alt="Electronics 9"><h4>3D Printed Dino Night Light</h4></div>
+        <div class="project-item"><img src="tas.png" alt="Electronics 10"><h4>Homemade Taser</h4></div>
+      </div>
+    </div>
+
+    <div id="capstones" class="project-list">
+      <h3>Capstone Projects</h3>
+      <div class="project-gallery">
+        <div class="project-item">
+          <img src="Anemo Alert.jpg" alt="cap 1">
+          <h4>Arduino Uno-Powered Portable Wind Speed Alert System (AnemoAlert)<br>
+          <b>Best Innovation Project Award 2023</b></h4><p>The objective of the investigation is the creation of a portable device, <br>the
+AnemoAlert, that can identify local wind speeds and utilize the <br>data collected as
+a basis for giving wind speed alerts</p></div>
+        <div class="project-item">
+          <img src="fard.png" alt="cap 2">
+          <h4>FLOOD AND RAIN DENSITY MONITORING DEVICE<br>
+(FARD MONITORING DEVICE)</h4><p>A device that measure both rain density using a hall sensor magnet and a tipping bucket rain gauge<br> and flood levels using water sensors</p></div>
+        <div class="project-item"> <img src="hydro.png" alt="cap 3"><h4>AUTOMATION AND MONITORING HYDROPONICS OF 
+BASIL (Ocimum basilicum)</h4><p>The study aims to automate the hydroponics system and monitor the growth of basil (ocimum basilicum) to maintain the environment.
+</p></div></div></div>
+
+    <div id="webgames" class="project-list">
+      <h3>Web Games Using JavaScript</h3>
+      <div class="project-gallery">
+        <div class="project-item">
+          <img src="blasting off.png" alt="WP Site 1-1">
+          <a href="https://elevaten.github.io/Blasting-Off/" target="_blank">Blasting Off</a>
+          <h4>Blasting Off!</h4></div>
+        <div class="project-item">
+          <img src="impurr.png" alt="WP Site 1-1">
+          <a href="https://elevaten.github.io/impurrfect-escape-beta/" target="_blank">Impurrfect Escape</a>
+          <h4>Impurrfect Escape <br> (With Live Leaderboard)</h4></div>
+        <div class="project-item">
+          <img src="three kings.png" alt="WP Site 1-1">
+          <a href="https://your-site1-link.com" target="_blank">Three Kings</a>
+          <h4>Three Kings</h4></div>
+      </div>
+    </div>
+
+    <div id="html-css-js" class="project-list">
+      <h3>HTML, CSS, JS Sites</h3>
+      <div class="project-gallery">
+        <div class="project-item"><img src="daily expense site.png" alt="site 1"><a href="https://your-site1-link.com" target="_blank">Site 1</a></h4><h4>Daily Expense Calculator Website</h4></div>
+        <div class="project-item"><img src="BMI CALC SITE.png" alt="site 2"><a href="https://elevaten.github.io/BMI-Calculator-Trial/" target="_blank">Site 2</a><h4>BMI Calculator Website</h4></div>
+        <div class="project-item"><h4>Site 3</h4></div>
+      </div>    
+    </div>
+
+    <div id="wordpress" class="project-list">
+      <h3>WordPress Websites</h3>
+      <div class="project-gallery">
+        <div class="project-item">
+          <img src="ele1.png" alt="WP Site 1-1">
+          <img src="ele2.png" alt="WP Site 1-2">
+          <img src="ele 3.png" alt="WP Site 1-3">
+          <h4>Web Developing Services Website</h4>
+        </div>
+        <div class="project-item">
+          <img src="donata.png" alt="WP Site 2-1">
+          <img src="donta 2.png" alt="WP Site 2-2">
+          <img src="donta 3.png" alt="WP Site 2-3">
+          <h4>Clothing Brand Website</h4>
+        </div>
+        <div class="project-item">
+          <img src="blast 1.png" alt="WP Site 3-1">
+          <img src="blast 2.png" alt="WP Site 3-2">
+          <img src="blast 3.png" alt="WP Site 3-3">
+          <h4>Web Game Hub Website</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About/Contact Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm Matthieu Perez, a passionate innovator and creator. Here's a little about what I do.</p>
+    <h3>Contact</h3>
+    <p>Email: <a href="mattressperez@gmail.com">justinbcolocado@gmail.com</a></p>
+    <p>Phone: +63 961 220 8503</p>
+    <p>Socials: <a href="#">LinkedIn</a> | <a href="https://github.com/pixeluz">GitHub</a> | <a href="https://www.youtube.com/@pixeluz">YouTube</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Justin. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    const track = document.getElementById('carouselTrack');
+    let scrollAmount = 0;
+    setInterval(() => {
+      scrollAmount += track.clientWidth / 5;
+      if (scrollAmount >= track.scrollWidth - track.clientWidth) {
+        scrollAmount = 0;
+      }
+      track.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+    }, 3000);
+  </script>
+</body>
+</html>
